@@ -42,7 +42,7 @@ body {
 .corner textarea {
   border-style: solid;
   border-width: 10px 10px 10px 10px;
-  border-image: url(border.svg) 10 10 10 10 stretch stretch;
+  border-image: url(./border.svg) 10 10 10 10 stretch stretch;
 }
 
 .corner button,
@@ -51,7 +51,7 @@ body {
 .corner input[type="file"]::file-selector-button {
   border-style: solid;
   border-width: 10px 10px 10px 10px;
-  border-image: url(button.svg) 10 10 10 10 stretch stretch;
+  border-image: url(./button.svg) 10 10 10 10 stretch stretch;
 }
 
 .corner input[type="color"] {
@@ -61,13 +61,13 @@ body {
 .corner hr {
   border-style: solid;
   border-width: 0px 3px 6px 3px;
-  border-image: url(hr.svg) 0 3 6 3 stretch stretch;
+  border-image: url(./hr.svg) 0 3 6 3 stretch stretch;
 }
 
 .corner blockquote {
   border-left-style: solid;
   border-width: 0px 6px 3px 6px;
-  border-image: url(bq.svg) 0 6 3 6 stretch stretch;
+  border-image: url(./bq.svg) 0 6 3 6 stretch stretch;
   padding-left: 0.5em;
   border-right-width: 0px;
 }
@@ -76,14 +76,14 @@ body {
   border-radius: 3px;
   border-style: solid;
   border-width: 3px 3px 3px 3px;
-  border-image: url(button.svg) 3 3 3 3 stretch stretch;
+  border-image: url(./button.svg) 3 3 3 3 stretch stretch;
 }
 
 .corner select {
   -webkit-appearance: none;
   appearance: none;
   padding-right: 1.5em;
-  background: url(caret.svg) no-repeat right transparent;
+  background: url(./caret.svg) no-repeat right transparent;
   background-position-x: calc(100% - 10px);
 }
 
@@ -160,5 +160,5 @@ body {
 .corner-border {
   border-style: solid;
   border-width: 10px 10px 10px 10px;
-  border-image: url(button.svg) 10 10 10 10 stretch stretch;
+  border-image: url(./button.svg) 10 10 10 10 stretch stretch;
 }
