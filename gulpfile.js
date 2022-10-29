@@ -13,8 +13,8 @@ function copySvf() {
 }
 function uploadOss() {
   var options = {
-    accessKeyId: "LTAI5tCwDdzwzLGCHBjf1esq",
-    accessKeySecret: "DbOqzAzE8bD2V3pbHjrwFIpnT3oTRV",
+    accessKeyId: process.env.ACCESSKEYID,
+    accessKeySecret: process.env.ACCESSKEYSECRET,
     bucket: "duimags",
     prefix: "cornerCss/",
     ossOpt: {
