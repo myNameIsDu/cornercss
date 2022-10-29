@@ -5,3 +5,11 @@ A simple css theme, It is secondly development from [Doodle CSS](https://github.
 [DEMO](https://github.com/chr15m/DoodleCSS)
 
 <img src="https://resource.sunbohao.com/uPic/gbQDAQ.png" alt="gbQDAQ" width='60%'/>
+
+## How to use it
+
+```html
+<link rel="stylesheet" href="https://resource.sunbohao.com/cornerCss/index-273b31bd39.css" />
+```
+
+Please don't use it in production. Because it's a side project.
