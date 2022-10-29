@@ -4,4 +4,4 @@ A simple css theme, It is secondly development from [Doodle CSS](https://github.
 
 [DEMO](https://github.com/chr15m/DoodleCSS)
 
-<img src="https://resource.sunbohao.com/uPic/sO3I1R.png" alt="sO3I1R" width='60%'/>
+<img src="https://resource.sunbohao.com/uPic/gbQDAQ.png" alt="gbQDAQ" width='60%'/>
