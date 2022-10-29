@@ -1,0 +1,22 @@
+{
+  "name": "cornercss",
+  "version": "0.0.1",
+  "description": "A simple CSS theme",
+  "author": "myNameIsDu",
+  "homepage": "https://github.com/myNameIsDu/cornercss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/myNameIsDu/cornercss"
+  },
+  "bugs": {
+    "url": "https://github.com/myNameIsDu/cornercss/issues"
+  },
+  "keywords": [
+    "css",
+    "theme",
+    "html",
+    "stylesheet",
+    "hand-drawn",
+    "cornercss"
+  ]
+}

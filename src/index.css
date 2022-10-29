@@ -1,0 +1,164 @@
+/* corner css
+ * https://github.com/myNameIsDu/cornercss/issues
+ */
+@import url("https://fonts.googleapis.com/css2?family=Short+Stack&display=swap");
+body {
+  font-family: "Short Stack", cursive !important;
+}
+.corner * {
+  box-sizing: border-box;
+}
+.corner {
+  color: #3c3c3c;
+}
+
+.corner input,
+.corner textarea,
+.corner table,
+.corner img {
+  max-width: 100%;
+}
+
+.corner fieldset * {
+  max-width: calc(100vw - 100px);
+}
+
+.corner a {
+  color: rgb(76 151 199);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.corner ul li {
+  list-style-type: "* ";
+}
+
+.corner label {
+  padding: 0.25em 0px;
+  display: inline-block;
+}
+
+.corner fieldset,
+.corner textarea {
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  border-image: url(border.svg) 10 10 10 10 stretch stretch;
+}
+
+.corner button,
+.corner input,
+.corner select,
+.corner input[type="file"]::file-selector-button {
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  border-image: url(button.svg) 10 10 10 10 stretch stretch;
+}
+
+.corner input[type="color"] {
+  min-height: 2.5em;
+}
+
+.corner hr {
+  border-style: solid;
+  border-width: 0px 3px 6px 3px;
+  border-image: url(hr.svg) 0 3 6 3 stretch stretch;
+}
+
+.corner blockquote {
+  border-left-style: solid;
+  border-width: 0px 6px 3px 6px;
+  border-image: url(bq.svg) 0 6 3 6 stretch stretch;
+  padding-left: 0.5em;
+  border-right-width: 0px;
+}
+/* TODO demo */
+.corner img {
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 3px 3px 3px 3px;
+  border-image: url(button.svg) 3 3 3 3 stretch stretch;
+}
+
+.corner select {
+  -webkit-appearance: none;
+  appearance: none;
+  padding-right: 1.5em;
+  background: url(caret.svg) no-repeat right transparent;
+  background-position-x: calc(100% - 10px);
+}
+
+.corner select[multiple] {
+  background: none;
+  padding: 0px;
+}
+
+.corner button,
+.corner textarea,
+.corner input,
+.corner select {
+  background-color: unset;
+  font-family: "Short Stack", cursive;
+  font-size: 1em;
+  color: #3c3c3c;
+}
+
+.corner input[type="checkbox"] {
+  border-width: 6px 6px 6px 6px;
+  border-image: url(./checkbox.svg) 6 6 6 6 stretch stretch;
+}
+.corner input[type="checkbox"],
+.corner input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: 0;
+  background: transparent;
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.corner input[type="checkbox"]:after,
+.corner input[type="radio"]:after {
+  font-size: 1.25em;
+  content: " ";
+  margin-bottom: -0.25em;
+}
+
+.corner input[type="checkbox"]:disabled:after,
+.corner input[type="radio"]:disabled:after {
+  content: "-";
+  color: grey;
+  font-family: inherit;
+}
+
+.corner input[type="checkbox"]:checked:after,
+.corner input[type="radio"]:checked:after {
+  content: "*";
+  font-family: inherit;
+}
+.corner input[type="radio"] {
+  border-width: 16px 16px 16px 16px;
+  border-image: url(./radio.svg) 16 16 16 16 stretch stretch;
+}
+.corner input[type="file"]::file-selector-button {
+  font-family: inherit;
+  font-size: 0.8em;
+  font-size: 1em;
+  background-color: unset;
+  color: #3c3c3c;
+}
+
+.corner input,
+.corner textarea,
+.corner table,
+.corner img {
+  max-width: 100%;
+}
+
+.corner .border,
+.corner-border {
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  border-image: url(button.svg) 10 10 10 10 stretch stretch;
+}
