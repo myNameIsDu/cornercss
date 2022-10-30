@@ -12,4 +12,10 @@ A simple css theme, It is secondly development from [Doodle CSS](https://github.
 <link rel="stylesheet" href="https://resource.sunbohao.com/cornerCss/index-273b31bd39.css" />
 ```
 
+Then add the class corner to the top level element you want to apply the theme to:
+
+```html
+<body class="corner">...</body>
+```
+
 Please don't use it in production. Because it's a side project. And the cnd is my own, I will publish it after every build and change.
