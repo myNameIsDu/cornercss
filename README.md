@@ -18,4 +18,4 @@ Then add the class corner to the top level element you want to apply the theme t
 <body class="corner">...</body>
 ```
 
-Please don't use it in production. Because it's a side project. And the cnd is my own, I will publish it after every build and change.
+Please don't use it in production. Because it's a side project. And the CDN is my own, I will publish it after every build and change.
