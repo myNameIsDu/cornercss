@@ -9,7 +9,8 @@ A simple css theme, It is secondly development from [Doodle CSS](https://github.
 ## How to use it
 
 ```html
-<link rel="stylesheet" href="https://resource.sunbohao.com/cornerCss/index-273b31bd39.css" />
+<link rel="stylesheet" href="https://resource.sunbohao.com/cornerCss/index-2222.css" />
+<link rel="stylesheet" href="https://resource.sunbohao.com/cornerCss/index-333.js" />
 ```
 
 Then add the class corner to the top level element you want to apply the theme to:
