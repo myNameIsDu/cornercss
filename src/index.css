@@ -162,3 +162,70 @@ body {
   border-width: 10px 10px 10px 10px;
   border-image: url(./button.svg) 10 10 10 10 stretch stretch;
 }
+
+.corner-modal-root {
+  position: fixed;
+  inset: 0;
+}
+.corner-modal-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.08);
+  z-index: 10;
+}
+@keyframes modalIn {
+  from {
+    opacity: 0.2;
+    transform: scale(0.3) translateX(-283.5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateX(-283.5px);
+  }
+}
+.corner-modal-position {
+  top: 150px;
+  transform-origin: center;
+  animation-name: modalIn;
+  animation-duration: 100ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width: 567px;
+  position: absolute;
+  z-index: 11;
+  left: 50%;
+  /* It's top left but use translateX first */
+  transform-origin: top left;
+  box-sizing: content-box;
+}
+.corner-modal-wrap {
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  border-image: url(./modal.svg) 15 15 15 15 fill stretch stretch;
+}
+.corner-modal-header {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  padding: 16px 24px;
+}
+.corner-modal-body {
+  font-weight: 400;
+  font-size: 14px;
+  padding: 16px 24px;
+  flex-grow: 1;
+}
+.corner-modal-footer {
+  font-size: 14px;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: end;
+}
+.corner-modal-cancel-button {
+  margin-right: 10px;
+}
