@@ -9,8 +9,8 @@ A simple css theme, It is secondly development from [Doodle CSS](https://github.
 ## How to use it
 
 ```html
-<link rel="stylesheet" href="https://resource.sunbohao.com/cornerCss/index-e0321889ef.css" />
-<script src="https://resource.sunbohao.com/cornerCss/index-85eb5e1736.js" >// if you only need Html Elements, you can ignore this script
+<link rel="stylesheet" href="https://resource.sunbohao.com/cornerCss/index-2a2cb631fc.css" />
+<script src="https://resource.sunbohao.com/cornerCss/index-dc9c123395.js" >// if you only need Html Elements, you can ignore this script
 
 ```
 
