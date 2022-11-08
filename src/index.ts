@@ -81,3 +81,5 @@ export const cornerConfirm = ({
   document.body.appendChild(confirmBody);
   confirmBody.focus();
 };
+//@ts-ignore
+window.cornerConfirm = cornerConfirm;
