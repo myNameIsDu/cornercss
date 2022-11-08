@@ -10,8 +10,8 @@ A simple css theme, It is secondly development from [Doodle CSS](https://github.
 
 ```html
 <link rel="stylesheet" href="https://resource.sunbohao.com/cornerCss/index-2a2cb631fc.css" />
-<script src="https://resource.sunbohao.com/cornerCss/index-dc9c123395.js" >// if you only need Html Elements, you can ignore this script
-
+<script src="https://resource.sunbohao.com/cornerCss/index-dc9c123395.js"></script>
+<!-- if you only need Html Elements, you can ignore this script -->
 ```
 
 Then add the class corner to the top level element you want to apply the theme to:
