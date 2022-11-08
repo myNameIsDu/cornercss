@@ -10,7 +10,7 @@ A simple css theme, It is secondly development from [Doodle CSS](https://github.
 
 ```html
 <link rel="stylesheet" href="https://resource.sunbohao.com/cornerCss/index-2a2cb631fc.css" />
-<script src="https://resource.sunbohao.com/cornerCss/index-dc9c123395.js"></script>
+<script src="https://resource.sunbohao.com/cornerCss/index-746b8cab5c.js"></script>
 <!-- if you only need Html Elements, you can ignore this script -->
 ```
 
