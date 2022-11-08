@@ -8,7 +8,9 @@ const postcss = require("gulp-postcss");
 const postcssPresetEnv = require("postcss-preset-env");
 const terser = require("gulp-terser");
 const cssnano = require("cssnano");
-const babel = require("gulp-babel");
+const ts = require("gulp-typescript");
+const tsProject = ts.createProject("tsconfig.json");
+const merge = require("merge2");
 
 async function clean() {
   await del("assets/**");
@@ -33,18 +35,22 @@ function uploadOss() {
   return src("./assets/*").pipe(oss(options));
 }
 
-function buildJs() {
-  return src("./src/index.js")
-    .pipe(
-      babel({
-        presets: ["@babel/preset-env"],
-      })
-    )
-    .pipe(terser())
-    .pipe(rev())
-    .pipe(dest("./assets"));
+function buildCdnJs() {
+  const tsResult = src("./src/index.ts").pipe(tsProject());
+  return merge([
+    tsResult.dts.pipe(dest("./assets")),
+    tsResult.js.pipe(terser()).pipe(rev()).pipe(dest("./assets")),
+  ]);
 }
-function buildCss() {
+function buildReleaseJs() {
+  const tsResult = src("./src/index.ts").pipe(tsProject());
+  return merge([
+    tsResult.dts.pipe(dest("./assets")),
+    tsResult.js.pipe(terser()).pipe(dest("./assets")),
+  ]);
+}
+
+function buildCdnCss() {
   const plugins = [postcssPresetEnv(), cssnano()];
 
   return src("./src/index.css")
@@ -59,7 +65,13 @@ function buildCss() {
     .pipe(dest("./assets"));
 }
 
-function changeReadmeCDNHash(cb) {
+function buildReleaseCss() {
+  const plugins = [postcssPresetEnv(), cssnano()];
+
+  return src("./src/index.css").pipe(postcss(plugins)).pipe(dest("./assets"));
+}
+
+function changeReadmeCDNHash() {
   const jsHash = fs
     .readdirSync("./assets")
     .find((item) => item.includes(".js"));
@@ -84,9 +96,10 @@ function changeReadmeCDNHash(cb) {
 
 exports.cdn = series(
   clean,
-  buildCss,
-  buildJs,
+  buildCdnCss,
+  buildCdnJs,
   copySvf,
   uploadOss,
   changeReadmeCDNHash
 );
+exports.release = series(clean, buildReleaseCss, buildReleaseJs, copySvf);

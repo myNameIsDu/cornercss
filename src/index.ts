@@ -1,11 +1,19 @@
-window.cornerConfirm = ({
+interface CornerConfirmParamsType {
+  title: string;
+  content: string;
+  onOk?: () => void | Promise<void>;
+  onCancel?: () => void | Promise<void>;
+  cancelText?: string;
+  okText?: string;
+}
+export const cornerConfirm = ({
   title = "",
   content = "",
   onOk = () => {},
   onCancel = () => {},
-  cancelText,
-  okText,
-} = {}) => {
+  cancelText = "",
+  okText = "",
+}: CornerConfirmParamsType) => {
   const cancelBtn = document.createElement("button");
   cancelBtn.classList.add("corner-modal-cancel-button");
   cancelBtn.innerHTML = cancelText;
@@ -63,7 +71,7 @@ window.cornerConfirm = ({
 
   confirmBody.append(modalMask, modalWrap);
 
-  const handlePressESC = (e) => {
+  const handlePressESC = (e: KeyboardEvent) => {
     if (e.keyCode === 27) {
       close();
     }
