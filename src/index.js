@@ -9,9 +9,12 @@ window.cornerConfirm = ({
   const cancelBtn = document.createElement("button");
   cancelBtn.classList.add("corner-modal-cancel-button");
   cancelBtn.innerHTML = cancelText;
+  const close = () => {
+    confirmBody.remove();
+  };
   const handleCancel = async () => {
     await onCancel();
-    confirmBody.remove();
+    close();
   };
   cancelBtn.addEventListener("click", handleCancel);
 
@@ -20,7 +23,7 @@ window.cornerConfirm = ({
   okBtn.innerHTML = okText;
   const handleOk = async () => {
     await onOk();
-    confirmBody.remove();
+    close();
   };
   okBtn.addEventListener("click", handleOk);
 
@@ -34,7 +37,7 @@ window.cornerConfirm = ({
 
   const modalHeaderClose = document.createElement("div");
   modalHeaderClose.classList.add("corner-modal-header-close");
-  modalHeaderClose.addEventListener("click", handleCancel);
+  modalHeaderClose.addEventListener("click", close);
   modalHeaderClose.innerHTML = "×";
 
   const modalHeader = document.createElement("div");
@@ -51,7 +54,7 @@ window.cornerConfirm = ({
 
   const modalMask = document.createElement("div");
   modalMask.classList.add("corner-modal-mask");
-  modalMask.addEventListener("click", handleCancel);
+  modalMask.addEventListener("click", close);
 
   const confirmBody = document.createElement("div");
   confirmBody.classList.add("corner-modal-root");
@@ -61,7 +64,7 @@ window.cornerConfirm = ({
 
   const handlePressESC = (e) => {
     if (e.keyCode === 27) {
-      handleCancel();
+      close();
     }
   };
   confirmBody.addEventListener("keydown", handlePressESC);
