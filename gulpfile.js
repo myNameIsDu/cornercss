@@ -36,7 +36,9 @@ function uploadOss() {
 }
 
 function buildCdnJs() {
-  const tsResult = src("./src/index.ts").pipe(tsProject());
+  const tsResult = src("./src/index.ts")
+    .pipe(replace(/export const/, "//@ts-ignore\nwindow."))
+    .pipe(tsProject());
   return merge([
     tsResult.dts.pipe(dest("./assets")),
     tsResult.js.pipe(terser()).pipe(rev()).pipe(dest("./assets")),
