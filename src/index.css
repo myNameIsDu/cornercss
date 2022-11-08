@@ -1,9 +1,9 @@
 /* corner css
  * https://github.com/myNameIsDu/cornercss/issues
  */
-@import url("https://fonts.googleapis.com/css2?family=Short+Stack&display=swap");
+ @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Short+Stack&display=swap');
 body {
-  font-family: "Short Stack", cursive !important;
+  font-family: "Short Stack","Ma Shan Zheng" !important;
 }
 .corner * {
   box-sizing: border-box;
@@ -177,12 +177,12 @@ body {
 @keyframes modalIn {
   from {
     opacity: 0.2;
-    transform: scale(0.3) translateX(-283.5px);
+    transform: scale(0.3) translateX(-250px);
   }
 
   to {
     opacity: 1;
-    transform: scale(1) translateX(-283.5px);
+    transform: scale(1) translateX(-250px);
   }
 }
 .corner-modal-position {
@@ -193,7 +193,7 @@ body {
   animation-timing-function: linear;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  width: 567px;
+  width: 500px;
   position: absolute;
   z-index: 11;
   left: 50%;
@@ -209,10 +209,21 @@ body {
   border-image: url(./modal.svg) 15 15 15 15 fill stretch stretch;
 }
 .corner-modal-header {
-  font-size: 22px;
-  font-weight: 600;
-  margin: 0;
+  display: flex;
+}
+.corner-modal-header-title{
   padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  flex-grow: 1;
+}
+.corner-modal-header-close{
+  font-size: 40px;
+  font-weight: 500;
+  width: 50px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
 }
 .corner-modal-body {
   font-weight: 400;

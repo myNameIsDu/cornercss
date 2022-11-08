@@ -28,9 +28,18 @@ window.cornerConfirm = ({
   modalFooter.classList.add("corner-modal-footer");
   modalFooter.append(cancelBtn, okBtn);
 
+  const modalHeaderTitle = document.createElement("div");
+  modalHeaderTitle.classList.add("corner-modal-header-title");
+  modalHeaderTitle.innerHTML = title;
+
+  const modalHeaderClose = document.createElement("div");
+  modalHeaderClose.classList.add("corner-modal-header-close");
+  modalHeaderClose.addEventListener("click", handleCancel);
+  modalHeaderClose.innerHTML = "×";
+
   const modalHeader = document.createElement("div");
   modalHeader.classList.add("corner-modal-header");
-  modalHeader.innerHTML = title;
+  modalHeader.append(modalHeaderTitle, modalHeaderClose);
 
   const modalBody = document.createElement("div");
   modalBody.classList.add("corner-modal-body");
