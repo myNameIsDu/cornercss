@@ -3,8 +3,8 @@ window.cornerConfirm = ({
   content = "",
   onOk = () => {},
   onCancel = () => {},
-  cancelText = "cancel",
-  okText = "OK",
+  cancelText,
+  okText,
 } = {}) => {
   const cancelBtn = document.createElement("button");
   cancelBtn.classList.add("corner-modal-cancel-button");
@@ -29,7 +29,8 @@ window.cornerConfirm = ({
 
   const modalFooter = document.createElement("div");
   modalFooter.classList.add("corner-modal-footer");
-  modalFooter.append(cancelBtn, okBtn);
+  cancelText && modalFooter.append(cancelBtn);
+  okText && modalFooter.append(okBtn);
 
   const modalHeaderTitle = document.createElement("div");
   modalHeaderTitle.classList.add("corner-modal-header-title");
